@@ -63,7 +63,7 @@ unset($languages[$lang]);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'BarCamp Kocaeli',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -71,7 +71,6 @@ unset($languages[$lang]);
     ]);
     $menuItems = [
         ['label' => Module::t('theme','Home'), 'url' => ['/site/home']],
-        ['label' => Module::t('theme','Sample'), 'url' => ['/sample/default/index']],
     ];
     if($settings['about'] === 'true')
          $menuItems[] = ['label' => Module::t('theme','About'), 'url' => ['/site/auth/about']];
@@ -95,7 +94,6 @@ unset($languages[$lang]);
             . '</li>';
     }
     
-
     $langItems = [];
     foreach ($languages as $key => $value){
         $langItems[] = ['label' => $value, 'url' => ['/site/auth/lang','lang' => $key]];
@@ -123,7 +121,6 @@ unset($languages[$lang]);
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; Kocaeli University Open Source Lab <?= date('Y') ?></p>
-
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
